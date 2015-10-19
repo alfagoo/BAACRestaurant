@@ -11,8 +11,7 @@ public class MyOpenHelper {
     //Explicit (ประกาศตัวแปร)
     private static final String DATABASE_NAME = "BAAC.db";
     private static final int DATABASE_VERSION = 1;
-
-
+    
 
 
     public MyOpenHelper(Context context) {
