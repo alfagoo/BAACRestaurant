@@ -1,5 +1,6 @@
 package com.example.baac.baacrestaurant;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -19,9 +20,19 @@ public class MainActivity extends AppCompatActivity {
         creteAndConnceted(); //create Method
 
         //Tester Add New Value
-        testerAdd();
+        //testerAdd();
+
+        deleteAllSQLite();
 
     }//Main Method
+
+    private void deleteAllSQLite() {
+
+        SQLiteDatabase objSqLiteDatabase = openOrCreateDatabase("BAAC.db", MODE_PRIVATE, null);
+        objSqLiteDatabase.delete("userTABLE", null, null);
+        objSqLiteDatabase.delete("foodTABLE", null, null);
+
+    }
 
     private  void testerAdd() {
 
